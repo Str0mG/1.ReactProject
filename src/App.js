@@ -23,6 +23,21 @@ class App extends Component {
       },
     ]
   }
+
+  addComentario = () => {
+    console.log('Adicionar comentario');
+    const NovoComentario = {
+      id: this.state.comentarios.length + 1,
+      name: 'Rafa',
+      email: 'Rafa@email.com',
+      body: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.',
+      date: new Date()
+    }
+
+    this.setState({
+      comentarios: [...this.state.comentarios, NovoComentario]
+    });
+  }
   render() {
     return (
     <div className="App">
@@ -33,6 +48,8 @@ class App extends Component {
         <Comentario key={comentario.id} name={comentario.name} email={comentario.email} date={comentario.date} body={comentario.body}>
         </Comentario>
       ))}
+
+      <button onClick={this.addComentario}>Adicionar comentario</button>
     </div>
   );
   }
