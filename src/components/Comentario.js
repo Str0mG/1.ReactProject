@@ -2,13 +2,20 @@ import React from "react";
 
 import './Comentario.css';
 
+import imagemUsuario from './avatar.png';
+
+
 
 const Comentario = props => (
     <div className="Comentario">
-        <h2>{props.name}</h2>
-        <p>{props.email}</p>
-        <p>{props.body}</p>
-        <p>{props.date.toString()}</p>
+        <img className="avatar" src={imagemUsuario} alt={props.name}/>
+        <div className="conteudo">
+            <h2 className="name">{props.name}</h2>
+            <p  className="email">{props.email}</p>
+            <p  className="msg">{props.body}</p>
+            <p  className="date">{props.date.toString()}</p>
+            <button onClick={props.onRemove} className="btn">&times;</button>
+        </div>
     </div>  
 );
 
