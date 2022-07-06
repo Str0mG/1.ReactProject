@@ -12,15 +12,8 @@ class App extends Component {
         name: 'Juan',
         email: 'Juan@gmail.com',
         body: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.',
-        date: new Date(2022,7,5)
-      },
-      {
-        id: 2,
-        name: 'Pedro',
-        email: 'Pedro@gmail.com',
-        body: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.',
-        date: new Date(2022,7,5)
-      },
+        date: new Date(2022,6,1,17,30,0)
+      }
     ],
     NovoComentario: {
       id: null,
